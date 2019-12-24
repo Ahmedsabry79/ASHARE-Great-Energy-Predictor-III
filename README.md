@@ -2,7 +2,7 @@
 An Implementation of Deep Learning Sequence model to predict Energy Consumption using LSTM.
 
 this model uses LSTM to predict the future energy consumption based on the history readings.
-this model uses Seq-to-Seq structure, with the use of attention network.
+this model uses Seq-to-Seq structure, with the use of attention network and is written in Tensorflow.
 # Features used:
 1) month (one hot)
 2) Day of week (one hot)
