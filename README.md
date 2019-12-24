@@ -8,7 +8,7 @@ this model uses Seq-to-Seq structure, with the use of attention network.
 2) Day of week (one hot)
 3) meter (one hot)
 4) time lags
-5) auto correlation co-officient.
+5) six-month auto correlation co-officient.
 
 the unique features of each timeseries are tiled and concatenated to the timeseries featureas.
 the encoder is CuDNNLSTM which is much faster than regular tensorflow LSTM Layer and the decoder is a LSTM cell wrapped in a tf.while_loop, which attends to the encoder states at each prediction timestep.
