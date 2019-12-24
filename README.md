@@ -3,7 +3,7 @@ An Implementation of Deep Learning Sequence model to predict Energy Consumption 
 
 this model uses LSTM to predict the future energy consumption based on the history readings.
 this model uses Seq-to-Seq structure, with the use of attention network.
-# the features used are:
+# Features used:
 1) month (one hot)
 2) Day of week (one hot)
 3) meter (one hot)
@@ -15,6 +15,10 @@ the encoder is CuDNNLSTM which is much faster than regular tensorflow LSTM Layer
 
 # Resampling data:
 since the data is provided for a whole year hour by hour, it will be difficult to predict it all at once, so the model provides an option to resamle the timeseries into n hours steps such that if the resamplin steps are 4 then the day will be divided into 4 readings instead of 24, where each reading represent a mean of 6 hours. this step can be used to provide an approximate solution.
+To avoid resampling just put the resampling_steps to 24.
+
+Note: you should always put the time parameters in days, the data generator will account for the resampling. 
 
 you can just run the training and validation phase by setting the model_mode parameter into 'train' (default) and running the main.py file
+
 TODO: upload the test.py file
