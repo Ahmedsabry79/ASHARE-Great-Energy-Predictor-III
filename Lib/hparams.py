@@ -27,8 +27,8 @@ def model_setup():
     parser.add_argument("--metrics", type = float or list, default = None)
     parser.add_argument("--total_period", type = int, default = 366)
     parser.add_argument("--training_period", type = int, default = 300)
-    parser.add_argument("--train_window", type = int, default = 15)
-    parser.add_argument("--pred_window", type = int, default = 3)
+    parser.add_argument("--train_window", type = int, default = 30)
+    parser.add_argument("--pred_window", type = int, default = 7)
     parser.add_argument("--batching_interval", type = int, default = 4)
     parser.add_argument("--free_random_space", type = int, default = 15)
     parser.add_argument("--resampling_steps", type = int, default = 24)
@@ -49,48 +49,3 @@ def model_setup():
     para = parser.parse_args()
     return para
 
-
-#class params:
-#    def __init__(self):
-#        
-#        self.model_layers = 1
-#        self.encoder_units = 256
-#        self.decoder_units = 256
-#        self.attn_vec_size = 64
-#        self.map_encoder_final_states = False
-#        self.encoder_keep_prob = 0.8
-#        self.enc_dec_keep_prob = 0.8
-#        self.decoder_keep_probs = [0.8, 0.8, 0.8]
-#        self.optimizer = 'adam'
-#        self.learning_rate = 0.0001
-#        self.exp_lr_decay = True
-#        self.loss = 'mse'
-#        self.clip_norm = None
-#        self.epsilon = 1e-8
-#        self.metrics = ['dmsle', 'dmse', 'dmae']
-#        self.total_period = 366
-#        self.training_period = 300
-#        self.train_window = 15
-#        self.pred_window = 3
-#        self.batching_interval = 4
-#        self.free_random_space = 15
-#        self.model_mode = 'train'
-#        self.batch_size = 128
-#        self.epochs = 100
-#        self.Zeros_Thresh = 0.05
-#        self.std_thresh = 5.
-#        self.resampling_steps = 24
-#        self.decay_steps = 1000
-#        
-#        self.missing_mean = 500.
-#        self.missing_std = 200.
-#        self.outliers_thresh = 4
-#        self.train_url = r'C:/Users/MSabry/Desktop/ASHARE - Energy Predictor III/models/LSTM Model/Data/train.csv'
-#        self.metadata_url = r'C:/Users/MSabry/Desktop/ASHARE - Energy Predictor III/models/LSTM Model/Data/building_metadata.csv'
-#        self.best_ckpt_path = r'C:/Users/MSabry/Desktop/ASHARE - Energy Predictor III/models/LSTM Model/ckpts/best/'
-#        self.every_ckpt_path = r'C:/Users/MSabry/Desktop/ASHARE - Energy Predictor III/models/LSTM Model/ckpts/every/'
-#
-#
-#
-#
-#
