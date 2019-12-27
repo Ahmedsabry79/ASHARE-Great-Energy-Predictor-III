@@ -7,10 +7,6 @@ Created on Sun Dec  8 16:00:05 2019
 
 import tensorflow as tf
 
-train_url = r'C:/Users/User/Desktop/LSTM Model/Data/train.csv'
-metadata_url = r'C:/Users/User/Desktop/LSTM Model/Data/building_metadata.csv'
-
-
 class InputPipeLine:
     
     def splitter(self, hits, lags):
